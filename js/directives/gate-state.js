@@ -109,6 +109,6 @@ bonsaiApp.directive('gateState', function () {
                 }
             };
         },
-        templateUrl: '/partials/component_GateState.html'
+        templateUrl: '../../partials/component_GateState.html'
     };
 });

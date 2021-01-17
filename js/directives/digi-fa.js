@@ -150,6 +150,6 @@ bonsaiApp.directive('digifagate', function () {
             $scope.controllerIsRead = true;
             $scope.checkForFinishedInitialization();
         },
-        templateUrl: '/partials/component_DigiFAGate.html'
+        templateUrl: '../../partials/component_DigiFAGate.html'
     };
 });

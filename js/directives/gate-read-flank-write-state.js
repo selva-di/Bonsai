@@ -128,6 +128,6 @@ bonsaiApp.directive('gateReadFlankWriteState', function () {
                 }
             };
         },
-        templateUrl: '/partials/component_GateReadFlankWriteState.html'
+        templateUrl: '../../partials/component_GateReadFlankWriteState.html'
     };
 });

@@ -1,3 +1,5 @@
+Clone to replace absolute links by relative onew. Doesn't work yet...
+
 Bonsai
 ======
 

@@ -290,7 +290,7 @@ bonsaiApp.directive('memory', function () {
             $scope.setContent($scope.content);
             $scope.$emit('componentInitialized', $scope.memory);
         },
-        templateUrl: '/partials/component_Memory.html'
+        templateUrl: '../../partials/component_Memory.html'
     };
 });
 

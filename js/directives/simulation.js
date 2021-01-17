@@ -272,6 +272,6 @@ bonsaiApp.directive('simulation', function () {
                 }
             });
         },
-        templateUrl: '/partials/simulation.html'
+        templateUrl: '../../partials/simulation.html'
     };
 });

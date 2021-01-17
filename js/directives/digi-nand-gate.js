@@ -129,6 +129,6 @@ bonsaiApp.directive('diginandgate', function () {
             $scope.controllerIsRead = true;
             $scope.checkForFinishedInitialization();
         },
-        templateUrl: '/partials/component_DigiGate.html'
+        templateUrl: '../../partials/component_DigiGate.html'
     };
 });

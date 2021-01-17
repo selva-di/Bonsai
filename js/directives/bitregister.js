@@ -360,7 +360,7 @@ bonsaiApp.directive('bitregister', function ($interval) {
             $scope.controllerIsRead = true;
             $scope.checkForFinishedInitialization();
         },
-        templateUrl: '/partials/component_BitRegister.html'
+        templateUrl: '../../partials/component_BitRegister.html'
     };
 });
 

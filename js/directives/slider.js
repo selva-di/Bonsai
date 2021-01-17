@@ -116,6 +116,6 @@ bonsaiApp.directive('slider', function () {
                 }
             };
         },
-        templateUrl: '/partials/element_slider.html'
+        templateUrl: '../../partials/element_slider.html'
     };
 });

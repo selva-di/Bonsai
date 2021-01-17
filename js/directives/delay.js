@@ -107,6 +107,6 @@ bonsaiApp.directive('delay', function () {
             $scope.controllerIsRead = true;
             $scope.checkForFinishedInitialization();
         },
-        templateUrl: '/partials/component_Delay.html'
+        templateUrl: '../../partials/component_Delay.html'
     };
 });

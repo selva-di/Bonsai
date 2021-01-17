@@ -180,6 +180,6 @@ bonsaiApp.directive('bitGateState', function () {
                 }
             };
         },
-        templateUrl: '/partials/component_BitGateState.html'
+        templateUrl: '../../partials/component_BitGateState.html'
     };
 });

@@ -78,13 +78,13 @@ var bonsaiApp = angular.module(
 );
 
 bonsaiApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/', {templateUrl: '/partials/introduction.html', controller: 'bonsaiPageCtrl'});
-    $routeProvider.when('/imprint/', {templateUrl: '/partials/imprint.html', controller: 'bonsaiPageCtrl'});
+    $routeProvider.when('/', {templateUrl: '../partials/introduction.html', controller: 'bonsaiPageCtrl'});
+    $routeProvider.when('/imprint/', {templateUrl: '../partials/imprint.html', controller: 'bonsaiPageCtrl'});
     var registerMenuRoutes = function (menu) {
         for (var i = 0; i < menu.length; i++) {
             if (menu[i].link && menu[i].partial) {
                 $routeProvider.
-                    when(menu[i].link, {templateUrl: '/partials/' + menu[i].partial, controller: 'bonsaiPageCtrl'});
+                    when(menu[i].link, {templateUrl: '../partials/' + menu[i].partial, controller: 'bonsaiPageCtrl'});
             }
             if (menu[i].submenu) {
                 registerMenuRoutes(menu[i].submenu);
@@ -93,10 +93,10 @@ bonsaiApp.config(['$routeProvider', '$locationProvider', function ($routeProvide
     };
     registerMenuRoutes(menu);
     $routeProvider.
-        when('/bonsai/', {templateUrl: '/partials/main.html', controller: 'bonsaiCpuCtrl'}).
-        when('/assembler/', {templateUrl: '/partials/assembler.html', controller: 'bonsaiAssemblerCtrl'}).
-        when('/bonsai/assembler/', {templateUrl: '/partials/assembler.html', controller: 'bonsaiAssemblerCtrl'});
-    $routeProvider.otherwise({templateUrl: '/partials/introduction.html', controller: 'bonsaiPageCtrl'});
+        when('/bonsai/', {templateUrl: '../partials/main.html', controller: 'bonsaiCpuCtrl'}).
+        when('/assembler/', {templateUrl: '../partials/assembler.html', controller: 'bonsaiAssemblerCtrl'}).
+        when('/bonsai/assembler/', {templateUrl: '../partials/assembler.html', controller: 'bonsaiAssemblerCtrl'});
+    $routeProvider.otherwise({templateUrl: '../partials/introduction.html', controller: 'bonsaiPageCtrl'});
     // use the HTML5 History API
     $locationProvider.html5Mode(true).hashPrefix('!');
 }]);
@@ -205,27 +205,27 @@ bonsaiApp.run(function ($timeout, $http, $templateCache) {
     $timeout(function () {
         // Template prefetching
         var prefetchingTemplates = [
-            '/partials/component_GateState.html',
-            '/partials/component_GateReadFlankWriteState.html',
-            '/partials/component_BitGateState.html',
-            '/partials/component_AndGate.html',
-            '/partials/component_BitRegister.html',
-            '/partials/component_Bus.html',
-            '/partials/component_Clock.html',
-            '/partials/component_CompareToZero.html',
-            '/partials/component_ControlWire.html',
-            '/partials/component_Delay.html',
-            '/partials/component_Filter.html',
-            '/partials/component_Led.html',
-            '/partials/component_ManualSwitch.html',
-            '/partials/component_Memory.html',
-            '/partials/component_NorGate.html',
-            '/partials/component_OrGate.html',
-            '/partials/component_Register.html',
-            '/partials/simulation.html',
-            '/partials/circuit.html',
-            '/partials/element_slider.html',
-            '/partials/assembler.html'
+            '../partials/component_GateState.html',
+            '../partials/component_GateReadFlankWriteState.html',
+            '../partials/component_BitGateState.html',
+            '../partials/component_AndGate.html',
+            '../partials/component_BitRegister.html',
+            '../partials/component_Bus.html',
+            '../partials/component_Clock.html',
+            '../partials/component_CompareToZero.html',
+            '../partials/component_ControlWire.html',
+            '../partials/component_Delay.html',
+            '../partials/component_Filter.html',
+            '../partials/component_Led.html',
+            '../partials/component_ManualSwitch.html',
+            '../partials/component_Memory.html',
+            '../partials/component_NorGate.html',
+            '../partials/component_OrGate.html',
+            '../partials/component_Register.html',
+            '../partials/simulation.html',
+            '../partials/circuit.html',
+            '../partials/element_slider.html',
+            '../partials/assembler.html'
         ];
         angular.forEach(prefetchingTemplates, function (templateUrl) {
             $http.get(templateUrl).success(function (templateData) {
